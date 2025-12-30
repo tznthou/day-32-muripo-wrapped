@@ -104,6 +104,8 @@ body {
   justify-content: center;
   padding: var(--space-lg);
   position: relative;
+  /* 為每個 slide 加上不透明背景，防止相鄰 slide 內容穿透 */
+  background: var(--bg-primary);
 }
 
 .slide-content {
