@@ -104,10 +104,6 @@ body {
   justify-content: center;
   padding: var(--space-lg);
   position: relative;
-  /* 使用背景色遮蓋鄰近 slide 的內容 */
-  background: var(--bg-primary);
-  /* 使用 overflow: clip 防止內容溢出到相鄰 slide，比 hidden 更現代且不會建立 scroll container */
-  overflow: clip;
 }
 
 .slide-content {
@@ -118,9 +114,6 @@ body {
   transform: translateY(30px);
   transition: opacity var(--duration-slow) var(--ease-out),
               transform var(--duration-slow) var(--ease-out);
-  /* 確保內容在任何背景之上 */
-  position: relative;
-  z-index: 1;
 }
 
 .slide[data-animated="true"] .slide-content {
