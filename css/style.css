@@ -104,7 +104,9 @@ body {
   justify-content: center;
   padding: var(--space-lg);
   position: relative;
-  overflow: hidden; /* 防止內容溢出到下一頁 */
+  /* 使用背景色遮蓋，避免裁掉動畫前的內容 */
+  background: var(--bg-primary);
+  isolation: isolate; /* 建立新的堆疊上下文，防止 z-index 穿透 */
 }
 
 .slide-content {
