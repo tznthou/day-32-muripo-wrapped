@@ -33,13 +33,25 @@ const Audio = {
     this.updateUI();
 
     // H01: 等待使用者第一次互動後才建立 AudioContext
+    const interactionEvents = ['click', 'keydown', 'touchstart', 'pointerdown', 'wheel'];
+
     const handleFirstInteraction = () => {
+      if (this.userHasInteracted) return; // 避免重複執行
       this.userHasInteracted = true;
+
+      // 立即建立並 resume AudioContext（在使用者手勢中）
+      this.getContext();
       this.resumeContext();
+
+      // 移除所有監聽器
+      interactionEvents.forEach(event => {
+        document.removeEventListener(event, handleFirstInteraction);
+      });
     };
-    document.addEventListener('click', handleFirstInteraction, { once: true });
-    document.addEventListener('keydown', handleFirstInteraction, { once: true });
-    document.addEventListener('touchstart', handleFirstInteraction, { once: true });
+
+    interactionEvents.forEach(event => {
+      document.addEventListener(event, handleFirstInteraction, { passive: true });
+    });
   },
 
   getContext() {
