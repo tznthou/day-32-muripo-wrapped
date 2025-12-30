@@ -1,0 +1,17 @@
+{
+  "name": "muripo-wrapped",
+  "version": "1.0.0",
+  "description": "Muripo Wrapped 2025 - 32 天程式冒險的年度回顧",
+  "type": "module",
+  "scripts": {
+    "generate-stats": "node scripts/generate-stats.js",
+    "dev": "npx live-server --port=3000"
+  },
+  "keywords": [
+    "wrapped",
+    "visualization",
+    "annual-review"
+  ],
+  "author": "tznthou",
+  "license": "MIT"
+}

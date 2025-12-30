@@ -1,0 +1,308 @@
+{
+  "generatedAt": "2025-12-30T06:02:04.327Z",
+  "totalProjects": 31,
+  "totalLines": 112928,
+  "avgLinesPerDay": 3643,
+  "maxLinesDay": {
+    "day": 27,
+    "name": "fortune-echoes",
+    "lines": 14627
+  },
+  "typeDistribution": {
+    "web": 24,
+    "cli": 3,
+    "extension": 1,
+    "mcp": 1,
+    "action": 2
+  },
+  "topTags": [
+    {
+      "tag": "web",
+      "count": 22
+    },
+    {
+      "tag": "data-visualization",
+      "count": 6
+    },
+    {
+      "tag": "cli",
+      "count": 3
+    },
+    {
+      "tag": "canvas",
+      "count": 3
+    },
+    {
+      "tag": "python",
+      "count": 3
+    },
+    {
+      "tag": "mcp",
+      "count": 2
+    },
+    {
+      "tag": "webcam",
+      "count": 2
+    },
+    {
+      "tag": "audio",
+      "count": 2
+    },
+    {
+      "tag": "motion-detection",
+      "count": 2
+    },
+    {
+      "tag": "web-audio",
+      "count": 2
+    }
+  ],
+  "languageDistribution": {
+    "Markdown": 33311,
+    "JavaScript": 25533,
+    "JSON": 23719,
+    "HTML": 12961,
+    "CSS": 11910,
+    "Python": 3093,
+    "CSV": 1215,
+    "SVG": 506,
+    "Bourne Again Shell": 306,
+    "YAML": 120,
+    "TypeScript": 94,
+    "TOML": 85,
+    "Bourne Shell": 56,
+    "DOS Batch": 19
+  },
+  "highlights": [
+    {
+      "dayIndex": 30,
+      "name": "loom-of-society",
+      "lines": 6512,
+      "score": 23
+    },
+    {
+      "dayIndex": 25,
+      "name": "data-tapestry",
+      "lines": 1817,
+      "score": 22
+    },
+    {
+      "dayIndex": 23,
+      "name": "city-breath",
+      "lines": 4562,
+      "score": 21
+    },
+    {
+      "dayIndex": 28,
+      "name": "site-tomograph",
+      "lines": 7173,
+      "score": 21
+    }
+  ],
+  "infrastructure": [
+    {
+      "name": "Muripo HQ",
+      "desc": "專案月曆網站"
+    },
+    {
+      "name": "Scheduled Release",
+      "desc": "定時自動發布"
+    },
+    {
+      "name": "Auto Blog Builder",
+      "desc": "自動化部落格系統"
+    },
+    {
+      "name": "Gallery Indexer",
+      "desc": "相簿自動索引系統"
+    },
+    {
+      "name": "Stargazer Galaxy",
+      "desc": "星光銀河圖自動更新"
+    }
+  ],
+  "weeklyProgress": [
+    {
+      "week": 1,
+      "projects": 7,
+      "label": "工具類"
+    },
+    {
+      "week": 2,
+      "projects": 7,
+      "label": "互動類"
+    },
+    {
+      "week": 3,
+      "projects": 7,
+      "label": "視覺化"
+    },
+    {
+      "week": 4,
+      "projects": 7,
+      "label": "資料科學"
+    },
+    {
+      "week": 5,
+      "projects": 3,
+      "label": "回顧收尾"
+    }
+  ],
+  "projectDetails": [
+    {
+      "dayIndex": 30,
+      "name": "loom-of-society",
+      "lines": 6512
+    },
+    {
+      "dayIndex": 25,
+      "name": "data-tapestry",
+      "lines": 1817
+    },
+    {
+      "dayIndex": 23,
+      "name": "city-breath",
+      "lines": 4562
+    },
+    {
+      "dayIndex": 28,
+      "name": "site-tomograph",
+      "lines": 7173
+    },
+    {
+      "dayIndex": 29,
+      "name": "well-of-probability",
+      "lines": 7380
+    },
+    {
+      "dayIndex": 10,
+      "name": "rhythm-catcher",
+      "lines": 1451
+    },
+    {
+      "dayIndex": 24,
+      "name": "topography-of-care",
+      "lines": 3414
+    },
+    {
+      "dayIndex": 27,
+      "name": "fortune-echoes",
+      "lines": 14627
+    },
+    {
+      "dayIndex": 31,
+      "name": "operation-cobra",
+      "lines": 4036
+    },
+    {
+      "dayIndex": 19,
+      "name": "stargazer-galaxy",
+      "lines": 1073
+    },
+    {
+      "dayIndex": 21,
+      "name": "last-sentinel",
+      "lines": 8521
+    },
+    {
+      "dayIndex": 26,
+      "name": "harmonic-monoliths",
+      "lines": 2527
+    },
+    {
+      "dayIndex": 14,
+      "name": "simple-console-mcp",
+      "lines": 4752
+    },
+    {
+      "dayIndex": 16,
+      "name": "font-mixer",
+      "lines": 2790
+    },
+    {
+      "dayIndex": 17,
+      "name": "aura-moods",
+      "lines": 3337
+    },
+    {
+      "dayIndex": 20,
+      "name": "seo-roaster",
+      "lines": 4812
+    },
+    {
+      "dayIndex": 22,
+      "name": "site-portrait",
+      "lines": 9590
+    },
+    {
+      "dayIndex": 8,
+      "name": "game-of-life",
+      "lines": 917
+    },
+    {
+      "dayIndex": 7,
+      "name": "neon-drum",
+      "lines": 2650
+    },
+    {
+      "dayIndex": 9,
+      "name": "voice-ripple",
+      "lines": 885
+    },
+    {
+      "dayIndex": 12,
+      "name": "workday",
+      "lines": 5295
+    },
+    {
+      "dayIndex": 13,
+      "name": "cyber-glitch",
+      "lines": 1817
+    },
+    {
+      "dayIndex": 15,
+      "name": "holo-card",
+      "lines": 3294
+    },
+    {
+      "dayIndex": 18,
+      "name": "landing-page",
+      "lines": 2364
+    },
+    {
+      "dayIndex": 4,
+      "name": "password",
+      "lines": 907
+    },
+    {
+      "dayIndex": 5,
+      "name": "ghost-radar",
+      "lines": 816
+    },
+    {
+      "dayIndex": 6,
+      "name": "json-salon",
+      "lines": 937
+    },
+    {
+      "dayIndex": 11,
+      "name": "file-organizer",
+      "lines": 790
+    },
+    {
+      "dayIndex": 2,
+      "name": "kebab-rename",
+      "lines": 891
+    },
+    {
+      "dayIndex": 3,
+      "name": "counter",
+      "lines": 507
+    },
+    {
+      "dayIndex": 1,
+      "name": "Compress",
+      "lines": 2484
+    }
+  ]
+}
