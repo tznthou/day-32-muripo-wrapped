@@ -26,14 +26,20 @@ const Storage = {
 const Audio = {
   context: null,
   enabled: true,
+  userHasInteracted: false, // H01: 追蹤使用者是否已互動
 
   init() {
     this.enabled = Storage.get('muripoWrapped_sound') !== 'false';
     this.updateUI();
 
-    // H01: 等待使用者第一次互動後啟動 AudioContext
-    document.addEventListener('click', () => this.resumeContext(), { once: true });
-    document.addEventListener('keydown', () => this.resumeContext(), { once: true });
+    // H01: 等待使用者第一次互動後才建立 AudioContext
+    const handleFirstInteraction = () => {
+      this.userHasInteracted = true;
+      this.resumeContext();
+    };
+    document.addEventListener('click', handleFirstInteraction, { once: true });
+    document.addEventListener('keydown', handleFirstInteraction, { once: true });
+    document.addEventListener('touchstart', handleFirstInteraction, { once: true });
   },
 
   getContext() {
@@ -48,6 +54,11 @@ const Audio = {
     if (this.context && this.context.state === 'suspended') {
       this.context.resume().catch(() => {});
     }
+  },
+
+  // H01: 檢查是否可以播放音效
+  canPlay() {
+    return this.enabled && this.userHasInteracted;
   },
 
   toggle() {
@@ -67,7 +78,7 @@ const Audio = {
   },
 
   playTick() {
-    if (!this.enabled) return;
+    if (!this.canPlay()) return;
     try {
       const ctx = this.getContext();
       const osc = ctx.createOscillator();
@@ -85,7 +96,7 @@ const Audio = {
   },
 
   playSlideChange() {
-    if (!this.enabled) return;
+    if (!this.canPlay()) return;
     try {
       const ctx = this.getContext();
       const osc = ctx.createOscillator();
@@ -104,7 +115,7 @@ const Audio = {
   },
 
   playSuccess() {
-    if (!this.enabled) return;
+    if (!this.canPlay()) return;
     try {
       const ctx = this.getContext();
       const notes = [523, 659, 784]; // C5, E5, G5
