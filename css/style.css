@@ -104,6 +104,7 @@ body {
   justify-content: center;
   padding: var(--space-lg);
   position: relative;
+  overflow: hidden; /* 防止內容溢出到下一頁 */
 }
 
 .slide-content {
