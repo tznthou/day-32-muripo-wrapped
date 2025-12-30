@@ -100,13 +100,17 @@ body {
   scroll-snap-align: start;
   height: 100vh;
   display: flex;
-  align-items: center;
+  /* 改用 flex-start，讓 margin: auto 實現「安全置中」 */
+  align-items: flex-start;
   justify-content: center;
   padding: var(--space-lg);
   position: relative;
   /* 為每個 slide 加上不透明背景，防止相鄰 slide 內容穿透 */
   background: var(--bg-primary);
+  /* 裁切溢出內容，防止內容溢出到相鄰 slide */
+  overflow: hidden;
 }
+
 
 .slide-content {
   max-width: 800px;
@@ -116,6 +120,8 @@ body {
   transform: translateY(30px);
   transition: opacity var(--duration-slow) var(--ease-out),
               transform var(--duration-slow) var(--ease-out);
+  /* 安全置中：內容少時置中，內容多時從頂部開始（標題不會被裁切） */
+  margin: auto 0;
 }
 
 .slide[data-animated="true"] .slide-content {
@@ -633,12 +639,20 @@ body {
 
 /* ----- Slide 9: Infrastructure ----- */
 .infra-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  /* 兩欄排列，節省垂直空間 */
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-md);
-  max-width: 500px;
+  max-width: 700px;
   margin: 0 auto;
   text-align: left;
+}
+
+@media (max-width: 600px) {
+  .infra-list {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
 }
 
 .infra-item {

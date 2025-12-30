@@ -293,8 +293,26 @@ const Slides = {
     this.updateProgressNav(index);
     this.animateSlide(slide);
 
+    // 隱藏非當前 slide 的內容，避免過渡時出現裁切的文字
+    this.hideOtherSlides(index);
+
     // H03: 通知螢幕閱讀器頁面變更
     this.announceSlide(index);
+  },
+
+  // 隱藏其他 slide 的內容
+  hideOtherSlides(activeIndex) {
+    this.slides.forEach((slide, i) => {
+      const content = slide.querySelector('.slide-content');
+      if (content) {
+        if (i === activeIndex) {
+          content.style.visibility = 'visible';
+        } else {
+          // 保留動畫狀態但隱藏內容
+          content.style.visibility = 'hidden';
+        }
+      }
+    });
   },
 
   // H03: ARIA 通知
