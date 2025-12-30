@@ -104,9 +104,10 @@ body {
   justify-content: center;
   padding: var(--space-lg);
   position: relative;
-  /* 使用背景色遮蓋，避免裁掉動畫前的內容 */
+  /* 使用背景色遮蓋鄰近 slide 的內容 */
   background: var(--bg-primary);
-  isolation: isolate; /* 建立新的堆疊上下文，防止 z-index 穿透 */
+  /* 使用 overflow: clip 防止內容溢出到相鄰 slide，比 hidden 更現代且不會建立 scroll container */
+  overflow: clip;
 }
 
 .slide-content {
@@ -117,6 +118,9 @@ body {
   transform: translateY(30px);
   transition: opacity var(--duration-slow) var(--ease-out),
               transform var(--duration-slow) var(--ease-out);
+  /* 確保內容在任何背景之上 */
+  position: relative;
+  z-index: 1;
 }
 
 .slide[data-animated="true"] .slide-content {
